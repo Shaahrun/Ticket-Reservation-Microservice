@@ -1,9 +1,16 @@
 package com.gmail.ejikemesharon;
 
-public record Ticket (
-        String passengerName,
-        String takeOff,
-        String destination,
-        String departureTime
-){
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Ticket {
+       private String passengerName;
+       private  String takeOff;
+       private String destination;
+       private String departureTime;
+
 }
