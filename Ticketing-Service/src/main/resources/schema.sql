@@ -1,0 +1,1 @@
+CREATE TABLE ticket (id INT PRIMARY KEY, passenger VARCHAR(255), takeoff VARCHAR(255), destination VARCHAR(255), departure VARCHAR(255))

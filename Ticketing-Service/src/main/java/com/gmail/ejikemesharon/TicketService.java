@@ -7,12 +7,12 @@ import org.springframework.web.reactive.function.client.WebClient;
 @Service
 public class TicketService {
 
-    @Autowired
-    private TicketRepository ticketRepository;
+    //@Autowired
+    //private TicketRepository ticketRepository;
     private WebClient webClient;
 
     public boolean purchaseTickets(String flightCode) {
-        String url = "http://localhost:8080/api/inventory" + flightCode;
+        String url = "http://localhost:8080/api/inventory/" + flightCode;
        Boolean available = webClient.get()
                 .uri(url)
                 .retrieve()
