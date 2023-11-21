@@ -16,7 +16,7 @@ public class TicketInventoryController {
         return ticketInventoryService.isInStock(flightCode);
     }
 
-    @PostMapping
+    @PostMapping("/add-tickets")
     public ResponseEntity<TicketInv> addTickets(@RequestBody TicketInv ticketInv) {
         ticketInventoryService.addTickets(ticketInv);
         return new ResponseEntity<>(ticketInv, HttpStatus.CREATED);

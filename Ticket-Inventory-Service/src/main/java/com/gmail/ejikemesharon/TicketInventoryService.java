@@ -16,7 +16,12 @@ public class TicketInventoryService {
 
             int seats = ticket.getAvailableSeats();
 
+            if (seats > 0) {
+                ticket.setAvailableSeats(seats - 1);
+            }
+
             return seats > 0;
+
         } else return false;
     }
 
